@@ -1,0 +1,40 @@
+/* Custom styles for active tabs */
+.active-tab {
+    position: relative;
+    color: #007bff;
+  }
+  
+  .active-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #007bff;
+  }
+  
+  /* Skills Heading in Blue */
+  .skills-heading {
+    color: #007bff; /* Blue color */
+  }
+  
+  /* Skills List */
+  .skills-list {
+    color: white; /* White color for the description */
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Skills List Items */
+  .skills-list li {
+    margin-bottom: 5px;
+  }
+  
+  /* Optional: Adjust font size for better readability */
+  .skills-heading,
+  .skills-list {
+    font-size: 1.1rem;
+  }
+  
+  

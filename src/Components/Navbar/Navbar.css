@@ -1,0 +1,23 @@
+/* Add this CSS to your Navbar.css or any other relevant stylesheet */
+
+.link-underline {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;  /* Space for the underline */
+  }
+  
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;  /* The thickness of the underline */
+    background-color: white;
+    transition: width 0.3s ease;  /* Smooth transition effect */
+  }
+  
+  .link-underline:hover::after {
+    width: 100%;  /* The underline will expand on hover */
+  }
+  

@@ -1,0 +1,19 @@
+/* Adjust positioning of left and right buttons */
+.alice-carousel .alice-carousel__prev-btn, 
+.alice-carousel .alice-carousel__next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px;
+}
+
+.alice-carousel .alice-carousel__prev-btn {
+    left: 10px; /* Left button positioning */
+}
+
+.alice-carousel .alice-carousel__next-btn {
+    right: 10px; /* Right button positioning */
+}
