@@ -28,6 +28,7 @@ function App() {
         </Routes>
 
         {/* Footer will always be at the bottom */}
+        <HomePage/>
         <AboutPage/>
         <MyTeam/>
         <MyProject/>
