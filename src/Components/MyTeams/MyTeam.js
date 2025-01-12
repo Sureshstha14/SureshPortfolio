@@ -16,23 +16,23 @@ const responsive = {
 const items = [
 
     <div className="item m-4" data-value="1">
-        <img src={samjhana} alt="NoImage" className="w-full h-64 object-cover" />
+        <img src={samjhana} alt="NoImage" className="w-full h-64 object-cover " loading='lazy' />
         <h4><span className="text-xl text-blue-500">Samjhana Shrestha </span><br /> FrontEnd Developer </h4>
     </div>,
     <div className="item m-4 " data-value="2">
-        <img src={suraj} alt="NoImage" className="w-full h-64 object-cover" />
+        <img src={suraj} alt="NoImage" className="w-full h-64 object-cover" loading='lazy'/>
         <h4><span className="text-xl text-blue-500">Suraj Timalsina </span><br /> Full-Stack Developer </h4>
     </div>,
     <div className="item m-4" data-value="3">
-        <img src={suman} alt="NoImage" className="w-full h-64 object-cover" />
+        <img src={suman} alt="NoImage" className="w-full h-64 object-cover" loading='lazy' />
         <h4><span className="text-xl text-blue-500">Suman Adhikari </span><br /> Full-Stack Developer </h4>
     </div>,
     <div className="item m-4 " data-value="4">
-        <img src={sachin} alt="NoImage" className="w-full h-64 object-cover" />
+        <img src={sachin} alt="NoImage" className="w-full h-64 object-cover" loading='lazy'/>
         <h4><span className="text-xl text-blue-500">Sachin Devkota </span><br /> Marketing </h4>
     </div>,
     <div className="item m-4 " data-value="5">
-        <img src={sumina} alt="NoImage" className="w-full h-64 object-cover" />
+        <img src={sumina} alt="NoImage" className="w-full h-64 object-cover" loading='lazy'/>
         <h4><span className="text-xl text-blue-500">Sumina Shrestha </span><br /> Finance and Revenue </h4>
     </div>,
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from './Images/girlwithMilk-removebg.png';
+import heroImage from './Images/suman_rmbg.png';
 import { TypeAnimation } from 'react-type-animation';
 import { FaFacebook, FaTwitter, FaMapMarkerAlt } from 'react-icons/fa'; // Import the icons
 import { useNavigate } from 'react-router-dom';
@@ -38,7 +38,7 @@ const HomePage = () => {
                     </button>
                 </div>
                 <div className="w-1/2 mt-6 md:mt-0 relative">
-                    <img src={heroImage} alt="Hero Image " className="w-full h-auto object-contain opacity-90 " />
+                    <img src={heroImage} alt="Hero Image " className="w-full h-auto object-contain opacity-90 " loading='lazy'/>
                 </div>
             </header>
             {/* Social Media Icons */}

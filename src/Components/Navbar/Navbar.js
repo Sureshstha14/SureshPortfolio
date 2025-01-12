@@ -2,7 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './Navbar.css'
+// import AdminLogin from '../Admin/adminLogin';
+import { useNavigate } from 'react-router-dom';
 function BasicExample() {
+  const navigate = useNavigate();
+  const gotoAdmin =()=>{
+    navigate('/admin/login')
+  }
+
   return (
     <Navbar expand="lg" className="bg-blue-400 text-white  shadow">
       <Container>
@@ -45,8 +52,10 @@ function BasicExample() {
               <NavDropdown.Divider />
               <NavDropdown.Item>
                 <Link to="/experience" className='text-white no-underline link-underline text-xl font-mono bg-blue-400 w-full '>Experience</Link>
-              </NavDropdown.Item>
+              </NavDropdown.Item>to
             </NavDropdown>
+            {/* <AdminLogin/> */}
+            <button className='bg-slate-600 rounded-xl p-2 hover:bg-slate-400 transition-all' onClick={gotoAdmin}>Admin</button>
           </Nav>
         </Navbar.Collapse>
       </Container>

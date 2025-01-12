@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio147/static/css/main.546ab255.css",
-    "main.js": "/Portfolio147/static/js/main.41c83015.js",
+    "main.js": "/Portfolio147/static/js/main.698cf7d9.js",
     "static/js/453.0e7cd845.chunk.js": "/Portfolio147/static/js/453.0e7cd845.chunk.js",
     "static/media/girlwithMilk-removebg.png": "/Portfolio147/static/media/girlwithMilk-removebg.c3e5e7b3143a70021829.png",
     "static/media/suman.jpg": "/Portfolio147/static/media/suman.d6cab179ff9e5dd51e8b.jpg",
@@ -16,11 +16,11 @@
     "static/media/sumina.jpg": "/Portfolio147/static/media/sumina.1aa6f3861d29db3f05a0.jpg",
     "index.html": "/Portfolio147/index.html",
     "main.546ab255.css.map": "/Portfolio147/static/css/main.546ab255.css.map",
-    "main.41c83015.js.map": "/Portfolio147/static/js/main.41c83015.js.map",
+    "main.698cf7d9.js.map": "/Portfolio147/static/js/main.698cf7d9.js.map",
     "453.0e7cd845.chunk.js.map": "/Portfolio147/static/js/453.0e7cd845.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.546ab255.css",
-    "static/js/main.41c83015.js"
+    "static/js/main.698cf7d9.js"
   ]
 }

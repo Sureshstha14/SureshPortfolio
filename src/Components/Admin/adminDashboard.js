@@ -14,10 +14,11 @@ const AdminDashboard = () => {
       <div>
         <h3>Manage your Portfolio</h3>
         <ul>
-          <li><Link to="/admin/manage-projects">Manage Projects</Link></li>
+          <li><Link to="/admin/manage-project">Manage Projects</Link></li>
           <li><Link to="/admin/settings">Settings</Link></li>
         </ul>
       </div>
+      
     </div>
   );
 };

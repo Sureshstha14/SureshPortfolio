@@ -5,8 +5,8 @@ import './Footer.css'; // External CSS file for footer styling
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div className="footer-content">
+    <footer className="footer-container mt-4">
+      <div className="footer-content ">
         {/* Left Section with Portfolio Links */}
         <div className="footer-links">
           <ul>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import heroImage from './girlwithMilk-removebg.png'
-import './AboutMe.css'
+import heroImage from './sumanupd.jpg'
+import './AboutMe.css';
+import { asset } from '../../assets/assets';
+// import {resume} from './suman_resume.pdf'
+
 const AboutPage = () => {
   const [key, setKey] = useState('skills'); // Default active tab is 'skills'
 
@@ -10,11 +13,11 @@ const AboutPage = () => {
     <div className="container py-5">
       <div className="row">
         {/* Left side: Image */}
-        <div className="col-md-4 mt-12">
+        <div className="col-md-4 mt-16 ">
           <img
             src={heroImage}
             alt="Profile"
-            className="img-fluid rounded-circle"
+            className="img-fluid rounded-circle " loading='lazy'
           />
         </div>
 
@@ -86,6 +89,9 @@ const AboutPage = () => {
           </Tabs>
         </div>
       </div>
+    <a href={asset.resume} download='Resume'>
+       <button type="button" class="btn btn-outline-primary">Download CV</button>
+      </a> 
     </div>
   );
 };
