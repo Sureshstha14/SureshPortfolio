@@ -46,7 +46,7 @@ const HomePage = () => {
   <p className="text-gray-600 mb-2">Follow us on social media</p>
             <div className="flex justify-center mt-4 gap-4 bg-transparent">
     <a
-        href="https://www.facebook.com/subashtimlcena"
+        href="https://www.facebook.com/profile.php?id=100051555421257"
         target="_blank"
         rel="noopener noreferrer"
         className="mx-2 text-blue-600 hover:text-blue-500 hover:scale-110 transition-all duration-300 hover:animate-shake"

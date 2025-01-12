@@ -28,6 +28,8 @@ function App() {
               <>
                 <HomePage />
                 <AboutPage />
+                <MyProject/>
+                <ContactForm/>
                 <Footer />
               </>
             } 

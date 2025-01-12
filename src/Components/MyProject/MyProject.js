@@ -5,28 +5,33 @@ import stockMarketImg from '../Images/stockMarker.jpg';
 import education from '../Images/education.jpg';
 import chatbot from '../Images/chatbot.jpg';
 
-const ProjectCard = ({ imgSrc, altText, projectLink, projectName }) => (
-  <a 
-    href={projectLink} 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="group block relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-  >
+// ProjectCard Component
+const ProjectCard = ({ imgSrc, altText, projectLink, projectName, description }) => (
+  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
     {/* Project Image */}
-    <img 
-      src={imgSrc} 
-      alt={altText} 
-      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-      loading="lazy" 
-    />
-    
-    {/* Overlay with Project Name */}
-    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <span className="text-white text-lg font-semibold">{projectName}</span>
+    <a href={projectLink} target="_blank" rel="noopener noreferrer">
+      <img 
+        src={imgSrc} 
+        alt={altText} 
+        className="w-full h-56 object-cover hover:scale-105" 
+        loading="lazy" 
+      />
+    </a>
+
+    {/* Project Details */}
+    <div className="p-4">
+      {/* Project Name */}
+      <h3 className="text-xl font-semibold text-gray-800 mb-2">{projectName}</h3>
+      
+      {/* Project Description */}
+      <p className="text-gray-600 text-sm">
+        {description}
+      </p>
     </div>
-  </a>
+  </div>
 );
 
+// MyProject Component
 const MyProject = () => {
   const projects = [
     {
@@ -34,30 +39,35 @@ const MyProject = () => {
       altText: 'Ecommerce Website',
       projectLink: 'https://www.youtube.com/shorts/z1gPB3l8ipQ',
       projectName: 'Ecommerce Dairy',
+      description: 'An ecommerce platform to manage dairy products and sales.',
     },
     {
       imgSrc: bookingImg,
       altText: 'Booking Website',
       projectLink: 'https://github.com/Sureshstha14/SubashDairy',
       projectName: 'Booking System',
+      description: 'A booking system for managing hotel reservations efficiently.',
     },
     {
       imgSrc: stockMarketImg,
       altText: 'Stock Market Project',
       projectLink: 'https://github.com/Sureshstha14/SubashDairy',
       projectName: 'Stock Market Analysis',
+      description: 'A tool for analyzing stock market trends and data.',
     },
     {
       imgSrc: chatbot,
       altText: 'Chatbot Project',
       projectLink: 'https://github.com/anotherProject',
       projectName: 'Chatbot',
+      description: 'An AI-powered chatbot for customer support automation.',
     },
     {
       imgSrc: education,
       altText: 'Educational Website',
       projectLink: 'https://github.com/fifthProject',
       projectName: 'Educational Website',
+      description: 'A platform to share educational content and tutorials.',
     },
   ];
 
@@ -75,6 +85,7 @@ const MyProject = () => {
             altText={project.altText} 
             projectLink={project.projectLink} 
             projectName={project.projectName} 
+            description={project.description} 
           />
         ))}
       </div>

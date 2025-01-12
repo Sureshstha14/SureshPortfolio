@@ -6,9 +6,7 @@ import './Navbar.css'
 import { useNavigate } from 'react-router-dom';
 function BasicExample() {
   const navigate = useNavigate();
-  const gotoAdmin =()=>{
-    navigate('/admin/login')
-  }
+  
 
   return (
     <Navbar expand="lg" className="bg-blue-400 text-white  shadow">
@@ -55,7 +53,6 @@ function BasicExample() {
               </NavDropdown.Item>to
             </NavDropdown>
             {/* <AdminLogin/> */}
-            <button className='bg-slate-600 rounded-xl p-2 hover:bg-slate-400 transition-all' onClick={gotoAdmin}>Admin</button>
           </Nav>
         </Navbar.Collapse>
       </Container>
