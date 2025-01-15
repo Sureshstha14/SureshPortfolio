@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/SureshPortfolio/static/css/main.d003df75.css",
+    "main.js": "/SureshPortfolio/static/js/main.652e53a9.js",
+    "static/js/453.0e7cd845.chunk.js": "/SureshPortfolio/static/js/453.0e7cd845.chunk.js",
+    "static/media/hotelbooking.jpg": "/SureshPortfolio/static/media/hotelbooking.b4129e9fb308ca98a91c.jpg",
+    "static/media/suresh_pp.jpg": "/SureshPortfolio/static/media/suresh_pp.cbb4c1d675fb7bdafdbb.jpg",
+    "static/media/chatbot.jpg": "/SureshPortfolio/static/media/chatbot.6e920f4ab444c7bc49fc.jpg",
+    "static/media/education.jpg": "/SureshPortfolio/static/media/education.74b8c831c1c54b4c2fc8.jpg",
+    "static/media/suresh_resume.pdf": "/SureshPortfolio/static/media/suresh_resume.34857017aa3be669b022.pdf",
+    "static/media/sachin.jpg": "/SureshPortfolio/static/media/sachin.9e4498e1f79858ac9e6b.jpg",
+    "static/media/suraj.jpg": "/SureshPortfolio/static/media/suraj.0724fc3f8d569915e561.jpg",
+    "static/media/stockMarker.jpg": "/SureshPortfolio/static/media/stockMarker.14f82bf3cc614587cda9.jpg",
+    "static/media/Ecommerce.png": "/SureshPortfolio/static/media/Ecommerce.fa700c135d199a3a343e.png",
+    "static/media/sumina.jpg": "/SureshPortfolio/static/media/sumina.bf34f9797feaf0bdd6c7.jpg",
+    "static/media/samjhana.jpg": "/SureshPortfolio/static/media/samjhana.ee69a2de738b307da9f8.jpg",
+    "index.html": "/SureshPortfolio/index.html",
+    "main.d003df75.css.map": "/SureshPortfolio/static/css/main.d003df75.css.map",
+    "main.652e53a9.js.map": "/SureshPortfolio/static/js/main.652e53a9.js.map",
+    "453.0e7cd845.chunk.js.map": "/SureshPortfolio/static/js/453.0e7cd845.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d003df75.css",
+    "static/js/main.652e53a9.js"
+  ]
+}
