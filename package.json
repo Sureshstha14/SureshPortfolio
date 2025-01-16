@@ -1,6 +1,6 @@
 {
-  "name": "sumanportfolio",
-  "homepage": "https://sureshstha14.github.io/SumanRepo/",
+  "name": "sureshportfolio",
+  "homepage": "https://sureshstha14.github.io/SureshPortfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +15,8 @@
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.6",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^11.18.0",
+    "motion": "^11.17.0",
     "nodemon": "^3.1.7",
     "react": "^18.3.1",
     "react-alice-carousel": "^2.9.1",

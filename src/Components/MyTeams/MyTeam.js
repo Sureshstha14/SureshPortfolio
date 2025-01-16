@@ -3,7 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import samjhana from '../Images/samjhana.jpg';
 import sachin from '../Images/sachin.jpg';
-import suman from '../Images/suman.jpg';
+import suman from '../Images/suresh_pp.jpg';
 import sumina from '../Images/sumina.jpg';
 import suraj from '../Images/suraj.jpg';
 // import './MyTeam.css';

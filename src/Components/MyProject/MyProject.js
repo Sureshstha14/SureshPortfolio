@@ -74,7 +74,7 @@ const MyProject = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-8">
       {/* Header */}
-      <h2 className="text-center text-4xl font-bold text-blue-500 mb-8">My Projects</h2>
+      <h2 className="text-center text-4xl font-bold text-orange-500 mb-8">My Projects</h2>
 
       {/* Responsive Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">

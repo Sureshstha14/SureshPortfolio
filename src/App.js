@@ -11,6 +11,7 @@ import AdminLogin from './Components/Admin/AdminLogin';
 import AdminDashboard from './Components/Admin/adminDashboard';
 import ManageProject from './Components/Admin/ManageProject';
 import Settings from './Components/Admin/Setting';
+import Services from './Components/Services';
 
 function App() {  
   return (
@@ -29,8 +30,10 @@ function App() {
                 <HomePage />
                 <AboutPage />
                 <MyProject/>
+                <Services/>
                 <ContactForm/>
                 <Footer />
+                
               </>
             } 
           />
@@ -44,6 +47,7 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/manage-project" element={<ManageProject />} />
           <Route path="/admin/settings" element={<Settings />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </Router>
     </div>

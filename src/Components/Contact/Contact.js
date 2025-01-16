@@ -57,7 +57,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form">
-      <h2 className="text-center text-3xl font-bold text-blue-500 mb-6">Contact Me</h2>
+      <h2 className="text-center text-3xl font-bold text-orange-500 mb-6">Contact Me</h2>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded-md shadow-lg">
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -106,7 +106,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 transition-all"
+          className="w-full bg-orange-500 text-white p-3 rounded-md hover:bg-orange-600 transition-all"
         >
           Send Message
         </button>

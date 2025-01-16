@@ -9,11 +9,11 @@ function BasicExample() {
   
 
   return (
-    <Navbar expand="lg" className="bg-blue-400 text-white  shadow">
+    <Navbar expand="lg" className="bg-orange-400 text-white  shadow">
       <Container>
         {/* Navbar Brand with Personalization */}
         <Navbar.Brand href="/" className="bold font-mono text-2xl text-red-600 ml-0">
-          Suman Adhikari
+          Suresh Shrestha
         </Navbar.Brand>
 
         {/* Navbar Toggle for small screens */}
@@ -42,15 +42,15 @@ function BasicExample() {
             {/* Dropdown Example */}
             <NavDropdown title="More" id="basic-nav-dropdown" className='text-white font-bold '>
               <NavDropdown.Item>
-                <Link to="/skills"className='text-white no-underline link-underline text-xl font-mono bg-blue-400 w-full'>Skills</Link>
+                <Link to="/skills"className='text-white no-underline link-underline text-xl font-mono bg-orange-400 w-full'>Skills</Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="/education" className='text-white no-underline link-underline text-xl font-mono bg-blue-400 w-full'>Education</Link>
+                <Link to="/education" className='text-white no-underline link-underline text-xl font-mono bg-orange-400 w-full'>Education</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
-                <Link to="/experience" className='text-white no-underline link-underline text-xl font-mono bg-blue-400 w-full '>Experience</Link>
-              </NavDropdown.Item>to
+                <Link to="/experience" className='text-white no-underline link-underline text-xl font-mono bg-orange-400 w-full '>Experience</Link>
+              </NavDropdown.Item>
             </NavDropdown>
             {/* <AdminLogin/> */}
           </Nav>

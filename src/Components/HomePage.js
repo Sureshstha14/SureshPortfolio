@@ -1,82 +1,114 @@
 import React from 'react';
-import heroImage from './Images/suman_rmbg.png';
+import heroImage from './Images/suresh_pp.jpg';
 import { TypeAnimation } from 'react-type-animation';
-import { FaFacebook, FaTwitter, FaMapMarkerAlt } from 'react-icons/fa'; // Import the icons
+import { FaFacebook, FaTwitter, FaMapMarkerAlt } from 'react-icons/fa'; // Import icons
 import { useNavigate } from 'react-router-dom';
-const HomePage = () => {
-    const navigate= useNavigate();
-    const handleContactButton =()=>{
-        navigate('/contact')
-    }
-    return (
-        <div>
-            {/* Hero Section */}
-            <header className="flex flex-col md:flex-row items-center justify-normal p-8 bg-gray-100">
-                <div className="w-1/2">
-                    <h1 className="text-5xl font-bold text-gray-800"> Hi!I am Suman Adhikari.</h1>
-                    <p className="mt-4 text-lg text-gray-600">
-                    Bachelor in Computer Engineering
-                    </p>
-                        <TypeAnimation
-                            sequence={[
-                                "I am  FrontEnd-Developer", 1200,
-                                'I am UI/UX Developer ',
-                                1000,
-                                'I am App-Developer',
-                                1000,
-                                'I am All-Rounder ',
-                                1000
-                            ]}
-                            wrapper="span"
-                            speed={50}
-                            style={{ fontSize: '2em', display: 'inline-block', fontFamily: 'monospace' }}
-                            repeat={Infinity}
-                        />
-                    <br/>
-                    <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-500 transition duration-300" onClick={handleContactButton}>
-                        Contact Me
-                    </button>
-                </div>
-                <div className="w-1/2 mt-6 md:mt-0 relative">
-                    <img src={heroImage} alt="Hero Image " className="w-full h-auto object-contain opacity-90 " loading='lazy'/>
-                </div>
-            </header>
-            {/* Social Media Icons */}
-            <div className="text-center">
-  <p className="text-gray-600 mb-2">Follow us on social media</p>
-            <div className="flex justify-center mt-4 gap-4 bg-transparent">
-    <a
-        href="https://www.facebook.com/profile.php?id=100051555421257"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mx-2 text-blue-600 hover:text-blue-500 hover:scale-110 transition-all duration-300 hover:animate-shake"
-        title="Follow us on Facebook"
-    >
-        <FaFacebook size={30} />
-    </a>
-    <a
-        href="https://maps.app.goo.gl/vR2Gf2bKMQbQh5xS8"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mx-2 text-red-600 hover:text-red-500 hover:scale-110 transition-all duration-300"
-        title="Find us on Google Maps"
-    >
-        <FaMapMarkerAlt size={30} />
-    </a>
-    <a
-        href="https://twitter.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mx-2 text-blue-400 hover:text-blue-300 hover:scale-110 transition-all duration-300"
-        title="Follow us on Twitter"
-    >
-        <FaTwitter size={30} />
-    </a>
-    </div>
-</div>
+import { asset } from '../assets/assets';
 
+const HomePage = () => {
+  const navigate = useNavigate();
+
+  // Handle "Contact Me" button click
+  const handleContactButton = () => {
+    navigate('/contact');
+  };
+
+  return (
+    <div>
+      {/* Hero Section */}
+      <header className="flex flex-col md:flex-row items-center justify-between p-8 bg-gray-100">
+        {/* Text Section */}
+        <div className="w-full md:w-1/2">
+          <h1 className="text-5xl font-bold text-gray-800">Hi! I am Suresh Shrestha.</h1>
+          <p className="mt-4 text-lg text-gray-600">Bachelor in Computer Engineering</p>
+
+          {/* Animated Typing Text */}
+          <TypeAnimation
+            sequence={[
+              'I am a FrontEnd Developer', 1200,
+              'I am a UI/UX Developer', 1000,
+              'I am a Full-Stack Developer', 1000,
+              'I am a Developer', 1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{
+              fontSize: '1.5em',
+              display: 'inline-block',
+              fontFamily: 'monospace',
+              color: 'orange', // Changed text color to orange
+            }}
+            repeat={Infinity}
+          />
+
+          {/* Contact Me Button */}
+          <br />
+          {/* <button
+            variant='outline'
+            
+            onClick={handleContactButton}
+          >
+            Contact Me
+          </button> */}
+          <div className='flex gap-4 justify-center'>
+          <button type="button" class="btn btn-outline-warning mt-12 px-3 py-2" onClick={handleContactButton}>Contact Me</button>
+         <a href={asset.resume} download="Resume">
+             <button type="button" class="btn btn-outline-warning mt-12 px-3 py-2" >Download CV</button>
+            </a>
+          </div>
         </div>
-    );
-}
+
+        {/* Hero Image Section */}
+        <div className="w-full h-screen md:w-1/2 mt-6 md:mt-0 flex justify-center">
+          <img
+            src={heroImage}
+            alt="Hero Image"
+            className="max-w-screen h-auto object-contain opacity-90 rounded-lg shadow-lg" // Added rounded corners and shadow for better appearance
+            loading="lazy"
+          />
+        </div>
+      </header>
+
+      {/* Social Media Section */}
+      <div className="text-center mt-8">
+        <p className="text-gray-600 mb-4">Follow me on social media</p>
+        <div className="flex justify-center gap-4">
+          {/* Facebook Icon */}
+          <a
+            href="https://www.facebook.com/profile.php?id=100053963673126"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-600 hover:text-orange-500 hover:scale-110 transition-transform duration-300"
+            title="Follow me on Facebook"
+          >
+            <FaFacebook size={30} />
+          </a>
+
+          {/* Google Maps Icon */}
+          <a
+            href="https://maps.app.goo.gl/vR2Gf2bKMQbQh5xS8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-600 hover:text-red-500 hover:scale-110 transition-transform duration-300"
+            title="Find me on Google Maps"
+          >
+            <FaMapMarkerAlt size={30} />
+          </a>
+
+          {/* Twitter Icon */}
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-400 hover:text-orange-300 hover:scale-110 transition-transform duration-300"
+            title="Follow me on Twitter"
+          >
+            <FaTwitter size={30} />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default HomePage;

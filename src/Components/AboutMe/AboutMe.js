@@ -1,98 +1,112 @@
 import React, { useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import heroImage from './sumanupd.jpg'
+import heroImage from '../Images/suresh_pp.jpg';
 import './AboutMe.css';
-import { asset } from '../../assets/assets';
-// import {resume} from './suman_resume.pdf'
+import { motion } from 'framer-motion';
+import { fadeIn } from '../Variant';
+import {asset, resume} from '../../assets/assets'
+// import {resume } from './suresh_resume.pdf'
+
+// Reusable component for list items
+const InfoListItem = ({ title, description }) => (
+  <li className="mb-4">
+    <span className="text-orange-600 font-mono text-2xl">{title}</span>
+    <br />
+    <span className="text-gray-700">{description}</span>
+  </li>
+);
 
 const AboutPage = () => {
-  const [key, setKey] = useState('skills'); // Default active tab is 'skills'
+  const [activeTab, setActiveTab] = useState('skills'); // State to manage active tab
+
+  const tabContent = {
+    skills: [
+      { title: 'UI/UX', description: 'Designing Web/App Interfaces' },
+      { title: 'Web Development', description: 'Web App Development' },
+      { title: 'AI/ML', description: 'Model Training and Validation' },
+    ],
+    experience: [
+      { title: 'Current Status', description: 'Working somewhere as FrontEnd Developer' },
+      { title: '2024', description: 'Leads Hack the Circle' },
+    ],
+    education: [
+      { title: '2020-2024', description: 'Bachelor in Computer Engineering from Khwopa College of Engineering' },
+      { title: '2018-19', description: '+2 Science from Khwopa College' },
+    ],
+  };
 
   return (
-    <div className="container py-5">
+    <motion.div
+      variants={fadeIn('up', 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.7 }}
+      className="container py-5"
+    >
       <div className="row">
-        {/* Left side: Image */}
-        <div className="col-md-4 mt-16 ">
+        {/* Profile Image Section */}
+        <motion.div
+          variants={fadeIn('right', 0.3)}
+          className="col-md-4 text-center mb-2 mb-md-0"
+        >
           <img
             src={heroImage}
             alt="Profile"
-            className="img-fluid rounded-circle " loading='lazy'
+            className="img-fluid rounded-circle shadow-lg"
+            loading="lazy"
           />
-        </div>
+        </motion.div>
 
-        {/* Right side: Content (Tabs) */}
-        <div className="col-md-8">
+        {/* Tabs Section */}
+        <motion.div
+          variants={fadeIn('left', 0.3)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.7 }}
+          className="col-md-8"
+        >
           <h2 className="mb-4">About Me</h2>
           <Tabs
             id="about-tabs"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}
-            className="mb-3"
+            activeKey={activeTab}
+            onSelect={(k) => setActiveTab(k)}
+            className="mb-3 text-orange-400"
           >
-            {/* Skills Tab */}
-            <Tab
-              eventKey="skills"
-              title={<span className={key === 'skills' ? 'active-tab' : ''}>Skills</span>}
-            >
-              <div>
-                <ul className='ml-auto text-left'>
-                    <li><span className='text-blue-600 font-mono text-2xl mt-4'>UI/UX</span>
-                    <br/>
-                    Designing Web/App Interfaces
-                    </li>
-                    <li><span className='text-blue-600 font-mono text-2xl mt-4'>Web Development</span>
-                    <br/>
-                    Web App Development
-                    </li>
-                    <li><span className='text-blue-600 font-mono text-2xl'>AI/ML</span>
-                    <br/>
-                     Model Training and Validation
-                    </li>
+            {/* Dynamically generate tabs */}
+            {Object.keys(tabContent).map((tabKey) => (
+              <Tab
+                key={tabKey}
+                eventKey={tabKey}
+                title={<span className={activeTab === tabKey ? 'active-tab' : ''}>{tabKey.charAt(0).toUpperCase() + tabKey.slice(1)}</span>}
+              >
+                <ul className="ml-0 text-left">
+                  {tabContent[tabKey].map(({ title, description }) => (
+                    <InfoListItem key={title} title={title} description={description} />
+                  ))}
                 </ul>
-              </div>
-            </Tab>
-
-            {/* Experience Tab */}
-            <Tab eventKey="experience" title="Experience">
-              <div>
-                <ul className='text-left m-2'>
-
-              <li><span   className='text-blue-600 font-mono text-2xl mt-4'>Current Status</span>
-                    <br/>
-                    Working Somewhere as FrontEnd Developer
-                    </li>
-              <li><span className='text-blue-600 font-mono text-2xl mt-4'>2024</span>
-                    <br/>
-                    Leads Hack the Circle 
-                    </li>
-                </ul>
-              </div>
-            </Tab>
-
-            {/* Education Tab */}
-            <Tab eventKey="education" title="Education">
-              <div>
-              <ul className='text-left m-2'>
-
-<li><span className='text-blue-600 font-mono text-2xl mt-4'>2019</span>
-      <br/>
-      Joined Khwopa Collage of Engineering
-      </li>
-<li><span className='text-blue-600 font-mono text-2xl mt-4'>2017</span>
-      <br/>
-      Joined VS Niketan 
-      </li>
-  </ul>
-              </div>
-            </Tab>
+              </Tab>
+            ))}
           </Tabs>
-        </div>
+        </motion.div>
       </div>
-    <a href={asset.resume} download='Resume'>
-       <button type="button" class="btn btn-outline-primary">Download CV</button>
-      </a> 
-    </div>
+
+      {/* Download Resume Button */}
+      {/* <motion.div
+        variants={fadeIn('up', 0.4)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+        className="text-center mt-4"
+      > */}
+      <div className='mt-[-12]'>
+      <a href={asset.resume} download className="btn btn-outline-warning">
+  Download CV
+</a>
+
+      </div>
+      {/* </motion.div> */}
+    </motion.div>
   );
 };
 
