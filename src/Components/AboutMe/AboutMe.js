@@ -52,7 +52,7 @@ const AboutPage = () => {
         >
           <img
             src={heroImage}
-            alt="Profile"
+            alt="Suresh Shrestha "
             className="img-fluid rounded-circle shadow-lg"
             loading="lazy"
           />
